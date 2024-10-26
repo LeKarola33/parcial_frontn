@@ -27,16 +27,16 @@ function InfoAdmin(){
             const CargarTablas = async () => {
             try {
                 //const iduser = localStorage.getItem("id"); //obtengo el (ID) del usuario autenticado  del local storage
-                const response1 = await axios.post('https://gana-loco-anderb.vercel.app/apiv1/info_admin_tabla1');
+                const response1 = await axios.post('https://parcialbakend.vercel.app/apiv1/info_admin_tabla1');
                 setDatosTabla1(response1.data);
 
-                const response2 = await axios.post('https://gana-loco-anderb.vercel.app/apiv1/info_admin_tabla2');
+                const response2 = await axios.post('https://parcialbakend.vercel.app/apiv1/info_admin_tabla2');
                 setDatosTabla2(response2.data);
 
-                const response3 = await axios.post('https://gana-loco-anderb.vercel.app/apiv1/info_admin_tabla3');
+                const response3 = await axios.post('https://parcialbakend.vercel.app/apiv1/info_admin_tabla3');
                 setDatosTabla3(response3.data);
 
-                const response4 = await axios.post('https://gana-loco-anderb.vercel.app/apiv1/info_admin_tabla4');
+                const response4 = await axios.post('https://parcialbakend.vercel/app/apiv1/info_admin_tabla4');
                 setDatosTabla4(response4.data);
 
             } catch (error) {
@@ -47,7 +47,7 @@ function InfoAdmin(){
             const CargarInfoUser = async () => {
                 try {
                     const user = localStorage.getItem("user"); //obtengo el (usuario) del usuario autenticado  del local storage
-                    const response2 = await axios.post('https://gana-loco-anderb.vercel.app/apiv1/info_user', {user});
+                    const response2 = await axios.post('https://parcialbakend.vercel/apiv1/info_user', {user});
                     setDatosUser(response2.data);
                 } catch (error) {
                 console.error(error);
@@ -57,7 +57,7 @@ function InfoAdmin(){
             const CargarAccessLogin = async () => {
                 try {
                     const user = localStorage.getItem("user"); //obtengo el (usuario) del usuario autenticado  del local storage
-                    const response3 = await axios.post('https://gana-loco-anderb.vercel.app/apiv1/info_audit_users', {user});
+                    const response3 = await axios.post('https://parcialbakend.vercel.app/apiv1/info_audit_users', {user});
                     setAuditLogin(response3.data);
                 } catch (error) {
                 console.error(error);

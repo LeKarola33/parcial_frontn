@@ -30,7 +30,7 @@ function InfoUser(){
             const CargarTabla = async () => {
             try {
                 const iduser = localStorage.getItem("id"); //obtengo el (ID) del usuario autenticado  del local storage
-                const response1 = await axios.post('https://gana-loco-anderb.vercel.app/apiv1/info_user_tabla', {iduser});
+                const response1 = await axios.post('https://parcialbakend.vercel.app/apiv1/info_user_tabla', {iduser});
                 setDatosTabla(response1.data);
             } catch (error) {
                 console.error(error);
@@ -40,7 +40,7 @@ function InfoUser(){
             const CargarInfoUser = async () => {
                 try {
                     const user = localStorage.getItem("user"); //obtengo el (usuario) del usuario autenticado  del local storage
-                    const response2 = await axios.post('https://gana-loco-anderb.vercel.app/apiv1/info_user', {user});
+                    const response2 = await axios.post('https://parcialbakend.vercel.app/apiv1/info_user', {user});
                     setDatosUser(response2.data);
                 } catch (error) {
                 console.error(error);
@@ -50,7 +50,7 @@ function InfoUser(){
             const CargarAccessLogin = async () => {
                 try {
                     const user = localStorage.getItem("user"); //obtengo el (usuario) del usuario autenticado  del local storage
-                    const response3 = await axios.post('https://gana-loco-anderb.vercel.app/apiv1/info_audit_users', {user});
+                    const response3 = await axios.post('https://parcialbakend.vercel.app/apiv1/info_audit_users', {user});
                     setAuditLogin(response3.data);
                 } catch (error) {
                 console.error(error);
@@ -68,7 +68,7 @@ function InfoUser(){
 
             const iduser = DatosUser.map((datauser) => (datauser._id)) //guardo el id del usuario en variable
             try {
-                const response = await fetch('https://gana-loco-anderb.vercel.app/apiv1/update_codigo', {
+                const response = await fetch('https://parcialbakend.vercel.app/apiv1/update_codigo', {
                 method: 'POST',
                 headers: {
                 'Content-Type': 'application/json'
@@ -83,7 +83,7 @@ function InfoUser(){
                     try {
                         //Recargo la tabla
                         const iduser = localStorage.getItem("id"); //obtengo el (ID) del usuario autenticado  del local storage
-                        const response = await axios.post('https://gana-loco-anderb.vercel.app/apiv1/info_user_tabla', {iduser})
+                        const response = await axios.post('https://parcialbakend.vercel.app/apiv1/info_user_tabla', {iduser})
                         setDatosTabla(response.data);
                     } catch (error) {
                         console.error('Error consultando nuevamente los datos:', error);

@@ -13,7 +13,7 @@ function RegistroAdmin(){
         //console.log('Form submitted:', { nombre, fechaN, correo, password, celular, cedula, ciudad });
 
         try {
-            const response = await fetch('https://gana-loco-anderb.vercel.app/apiv1/new_admin', {
+            const response = await fetch('https://parcialbakend.vercel.app/apiv1/new_admin', {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json'

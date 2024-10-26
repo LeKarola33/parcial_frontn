@@ -18,7 +18,7 @@ function Login(){
     
         try {
           //const response = await fetch('https://pocketuxback.vercel.app/apiv1/login', {
-          const response = await fetch('https://gana-loco-anderb.vercel.app/apiv1/login', {
+          const response = await fetch('https://parcialbakend.vercel.app/apiv1/login', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
