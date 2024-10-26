@@ -62,7 +62,7 @@ function Login(){
 
     const nuevousuario = () => {
         Navigate("/NewUser")
-        //window.location = 'https://gana-loco-ander.vercel.app'
+        
     };
 
     return (
@@ -70,50 +70,65 @@ function Login(){
         <section class="text-center">
         <div class="p-5 bg-image" ></div>
         
-        <div class="card mx-4 mx-md-5 shadow-5-strong bg-body-tertiary" >
-            <div class="card-body py-4 px-md-5">
+            <div className='row'>
 
-                    <div class="row d-flex justify-content-center">
+                <div className='col-1'></div>
 
-                        <div className="col-lg-5">
-                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid" alt="Sample image" />
+                <div className='col-7'>
+
+
+                    <div class="card mx-4 mx-md-5 shadow-5-strong text-white bg-transparent text-dark" >
+                        <div class="card-body py-4 px-md-5">
+
+                                <div class="row d-flex justify-content-center">
+
+                                    <div className="col-lg-1">
+                                        
+                                    </div>
+                                    <div class="col-lg-10">
+                                    <h2 class="fw-bold mb-5">PARTICIPAR</h2>
+                                    <form onSubmit={handleSubmitLogin}>
+
+                                        <div class="d-flex justify-content-center">
+                                        
+                                            <div className="row"> 
+                                            <div data-mdb-input-init class="form-outline mb-4">
+                                            <label class="form-label" htmlFor="email">Participante</label>
+                                            <input type="email" placeholder='example@ezample.com' id="email" class="form-control" value={correo} onChange={(e) => setCorreo(e.target.value)} required/>
+                                            </div>
+
+                                            <div data-mdb-input-init class="form-outline mb-4">
+                                            <label class="form-label" for="form3Example4">Tu clave</label>
+                                            <input type="password" id="form3Example4" class="form-control" placeholder='***********' value={password} onChange={(e) => setPassword(e.target.value)} required/>
+                                            
+                                            </div>
+                                            </div>
+
+                                        </div>
+
+                                        <button type="submit" class="btn btnlogin btn-outline-warning mb-4"  >
+                                        Ingresa aquí 
+                                        </button>
+
+                                        <div class="text-center">
+                                            <p class="mb-5 pb-lg-2" >Crea una cuenta para ganar:<a href="#" onClick={nuevousuario}> Registrate</a></p>
+                                        </div>
+                                    </form>
+
+                                    </div>
+
+                                </div>
+
                         </div>
-                        <div class="col-lg-7">
-                        <h2 class="fw-bold mb-5">Iniciar Sesión</h2>
-                        <form onSubmit={handleSubmitLogin}>
-
-                            <div class="d-flex justify-content-center">
-                            
-                                <div className="row"> 
-                                <div data-mdb-input-init class="form-outline mb-4">
-                                <label class="form-label" htmlFor="email">Usuario</label>
-                                <input type="email" placeholder='example@ezample.com' id="email" class="form-control" value={correo} onChange={(e) => setCorreo(e.target.value)} required/>
-                                </div>
-
-                                <div data-mdb-input-init class="form-outline mb-4">
-                                <label class="form-label" for="form3Example4">Clave</label>
-                                <input type="password" id="form3Example4" class="form-control" placeholder='***********' value={password} onChange={(e) => setPassword(e.target.value)} required/>
-                                
-                                </div>
-                                </div>
-
-                            </div>
-
-                            <button type="submit" class="btn btn-primary btn-block mb-4"  >
-                            Ingresar
-                            </button>
-
-                            <div class="text-center">
-                                <p class="mb-5 pb-lg-2" >Aún no tienes una cuenta? <a href="#" onClick={nuevousuario}> ;Registrate aqui</a></p>
-                            </div>
-                        </form>
-
-                        </div>
-
                     </div>
 
+
+
+                </div>
+
+                <div className='col-4'></div>
             </div>
-        </div>
+
 
         <div class="p-5 bg-image" ></div>
         </section>

@@ -3,12 +3,12 @@
   backdrop-filter: blur(30px);
 }
 .p-5{
-  background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
+  background-image: url('https://img.freepik.com/vector-gratis/tarjeta-juego-as-fondo-oscuro-espacio-texto-efecto-luz_1017-54057.jpg?t=st=1729955247~exp=1729958847~hmac=e517039cb2f9dd524c10d737154efa861b0fc58fcee4df28e88fd61e7bf6cd35&w=826');
   height: 200px;
 }
 
 .modal {
-  background: white;
+  background: rgb(112, 110, 90);
   padding: 2rem;
   position: absolute;
   top: 50%;
@@ -38,4 +38,12 @@
   padding: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
+}
+
+.btn {
+  background-color: #369988;
+}
+
+.btnlogin{
+  background-color: #efe37a;
 }
